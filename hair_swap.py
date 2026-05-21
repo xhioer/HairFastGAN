@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import argparse
 import typing as tp
 from collections import defaultdict
@@ -21,7 +23,7 @@ from utils.time import bench_session
 
 TImage = tp.TypeVar('TImage', torch.Tensor, Image.Image, np.ndarray)
 TPath = tp.TypeVar('TPath', Path, str)
-TReturn = tp.TypeVar('TReturn', torch.Tensor, tuple[torch.Tensor, ...])
+TReturn = tp.TypeVar('TReturn', torch.Tensor, tp.Tuple[torch.Tensor, ...])
 
 
 class HairFast:
